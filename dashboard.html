@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SABSOUB Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .glow {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(0,255,255,0.05), transparent 70%);
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .dashboard-box {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #00ffff;
+      border-radius: 12px;
+      padding: 40px;
+      width: 80%;
+      max-width: 600px;
+      margin: 80px auto;
+      box-shadow: 0 0 20px #00ffff;
+      color: white;
+      text-align: center;
+    }
+
+    .dashboard-box h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffff;
+    }
+
+    .stats {
+      margin: 20px 0;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #00ffff33;
+      border: 1px solid #00ffff;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background: #00ffff99;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #00ffff88;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="dashboard-box">
+    <h1>Welcome to SABSOUB Dashboard</h1>
+    <div class="stats">
+      <p>User: Admin</p>
+      <p>Session: Active</p>
+      <p>Last Login: Just now</p>
+    </div>
+    <div class="buttons">
+      <a href="admin.html">Admin Panel</a>
+      <a href="result.html">View Results</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </div>
+  <footer>© 2025 SABSOUB. All rights reserved.</footer>
+</body>
+</html>

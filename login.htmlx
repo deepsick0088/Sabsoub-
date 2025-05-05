@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SABSOUB Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: contain;
+      background-color: black;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00f0ff;
+      text-align: center;
+      width: 300px;
+    }
+
+    .login-box h1 {
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background: #111;
+      color: #0ff;
+      font-size: 14px;
+      box-shadow: 0 0 5px #00f0ff inset;
+    }
+
+    input[type="submit"] {
+      width: 95%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background: #00f0ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #00d4e0;
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .login-box p {
+      color: #0ff;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h1>SABSOUB Login</h1>
+    <form action="/login" method="post">
+      <input type="text" name="username" placeholder="Username" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <input type="submit" value="Login">
+    </form>
+    <p>© 2025 SABSOUB. All rights reserved.</p>
+  </div>
+</body>
+</html>

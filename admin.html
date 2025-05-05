@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SABSOUB Admin Panel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .glow {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255,0,255,0.05), transparent 70%);
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .admin-box {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid #ff00ff;
+      border-radius: 12px;
+      padding: 30px;
+      width: 90%;
+      max-width: 800px;
+      margin: 60px auto;
+      box-shadow: 0 0 20px #ff00ff;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff00ff;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      border: 1px solid #ff00ff55;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba(255, 0, 255, 0.05);
+    }
+
+    section h2 {
+      color: #ff66ff;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: #ff00ff33;
+      border: 1px solid #ff00ff;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff00ff88;
+    }
+
+    input, select {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid #ff00ff;
+      padding: 8px;
+      border-radius: 4px;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #ff00ff99;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="admin-box">
+    <h1>Admin Control Panel</h1>
+
+    <section>
+      <h2>File Access</h2>
+      <p>Browse or upload user files.</p>
+      <button onclick="alert('File Access Coming Soon')">Open File Manager</button>
+    </section>
+
+    <section>
+      <h2>APK Screening</h2>
+      <p>Scan APKs for suspicious code or behavior.</p>
+      <button onclick="alert('APK Scanner Module Loading')">Start Scan</button>
+    </section>
+
+    <section>
+      <h2>Camera Manipulation</h2>
+      <p>Access and control device camera (admin only).</p>
+      <button onclick="alert('Camera Access Coming Soon')">Activate Camera</button>
+    </section>
+
+    <section>
+      <h2>User Management</h2>
+      <label for="userSelect">Select User:</label>
+      <select id="userSelect">
+        <option>User01</option>
+        <option>User02</option>
+      </select>
+      <br><br>
+      <button onclick="alert('Permission Granted')">Grant Access</button>
+      <button onclick="alert('Access Revoked')">Revoke Access</button>
+    </section>
+
+    <footer>© 2025 SABSOUB. Admin Only Access.</footer>
+  </div>
+</body>
+</html>
